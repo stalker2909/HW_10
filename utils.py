@@ -1,4 +1,4 @@
-# from base64 import encode
+from base64 import encode
 import json
 
 

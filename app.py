@@ -1,9 +1,9 @@
 from flask import Flask
 import utils
 
-
 app = Flask(__name__)
 candidates = utils.load_candidates()
+
 
 @app.route('/')
 def home():
@@ -27,7 +27,6 @@ def profile(id):
 
 @app.route('/skill/<skill>')
 def search_skill(skill):
-
     for candidate in candidates.values():
         skills = candidate['skills'].split(', ')
         skills = [x.lower() for x in skills]
